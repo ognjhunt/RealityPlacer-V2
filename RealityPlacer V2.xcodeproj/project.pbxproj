@@ -12,6 +12,11 @@
 		6AB9319727F0F308003F5E40 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9319627F0F308003F5E40 /* Experience.rcproject */; };
 		6AB9319927F0F309003F5E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9319827F0F309003F5E40 /* Assets.xcassets */; };
 		6AB9319C27F0F309003F5E40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9319B27F0F309003F5E40 /* Preview Assets.xcassets */; };
+		6AB931A927F0F521003F5E40 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A427F0F520003F5E40 /* fender_stratocaster.usdz */; };
+		6AB931AA27F0F521003F5E40 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A527F0F520003F5E40 /* toy_biplane.usdz */; };
+		6AB931AB27F0F521003F5E40 /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A627F0F520003F5E40 /* chair_swan.usdz */; };
+		6AB931AC27F0F521003F5E40 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A727F0F520003F5E40 /* tv_retro.usdz */; };
+		6AB931AD27F0F521003F5E40 /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A827F0F521003F5E40 /* gramophone.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,12 @@
 		6AB9319627F0F308003F5E40 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		6AB9319827F0F309003F5E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB9319B27F0F309003F5E40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6AB931A227F0F432003F5E40 /* RealityPlacer-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RealityPlacer-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6AB931A427F0F520003F5E40 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
+		6AB931A527F0F520003F5E40 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
+		6AB931A627F0F520003F5E40 /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
+		6AB931A727F0F520003F5E40 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
+		6AB931A827F0F521003F5E40 /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,8 @@
 		6AB9319127F0F308003F5E40 /* RealityPlacer V2 */ = {
 			isa = PBXGroup;
 			children = (
+				6AB931A327F0F507003F5E40 /* Assets */,
+				6AB931A227F0F432003F5E40 /* RealityPlacer-V2-Info.plist */,
 				6AB9319227F0F308003F5E40 /* AppDelegate.swift */,
 				6AB9319427F0F308003F5E40 /* ContentView.swift */,
 				6AB9319627F0F308003F5E40 /* Experience.rcproject */,
@@ -68,6 +81,18 @@
 				6AB9319B27F0F309003F5E40 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6AB931A327F0F507003F5E40 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6AB931A627F0F520003F5E40 /* chair_swan.usdz */,
+				6AB931A427F0F520003F5E40 /* fender_stratocaster.usdz */,
+				6AB931A827F0F521003F5E40 /* gramophone.usdz */,
+				6AB931A527F0F520003F5E40 /* toy_biplane.usdz */,
+				6AB931A727F0F520003F5E40 /* tv_retro.usdz */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +153,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB931AC27F0F521003F5E40 /* tv_retro.usdz in Resources */,
 				6AB9319C27F0F309003F5E40 /* Preview Assets.xcassets in Resources */,
 				6AB9319927F0F309003F5E40 /* Assets.xcassets in Resources */,
+				6AB931AA27F0F521003F5E40 /* toy_biplane.usdz in Resources */,
+				6AB931AB27F0F521003F5E40 /* chair_swan.usdz in Resources */,
+				6AB931AD27F0F521003F5E40 /* gramophone.usdz in Resources */,
+				6AB931A927F0F521003F5E40 /* fender_stratocaster.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +304,8 @@
 				DEVELOPMENT_TEAM = KH8B299556;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = "RealityPlacer-V2-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Well its an AR app bruh";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -305,7 +336,8 @@
 				DEVELOPMENT_TEAM = KH8B299556;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = "RealityPlacer-V2-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Well its an AR app bruh";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
