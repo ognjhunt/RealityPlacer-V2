@@ -48,11 +48,30 @@ class Model {
     var modelEntity: ModelEntity?
     var scaleCompensation: Float
     
+    var cancellable: AnyCancellable?
+    
     init(name: String, category: AssetsModel, scaleCompensation: Float = 1.0) {
         self.name = name
         self.category = category
         self.thumbnail = UIImage(named: name) ?? UIImage(systemName: "photo")!
         self.scaleCompensation = scaleCompensation
+    }
+    
+    func asyncLoad() {
+        let filename = name + ".usdz"
+        cancellable = ModelEntity.loadModelAsync(named: filename)
+            .sink { loadCompletion in
+                switch loadCompletion {
+                case .failure(let error):
+                    print("ERROR:", error)
+                case .finished:
+                    break
+                }
+            } receiveValue: { [self] modelEntity in
+                self.modelEntity = modelEntity
+                self.modelEntity?.scale *= self.scaleCompensation
+                print("model loaded is ", name)
+        }
     }
 }
 
@@ -61,41 +80,38 @@ struct Models {
     init() {
         // For furniture
         let chairSwan = Model(name: "chair_swan", category: .Furniture, scaleCompensation: 1.0)
-        let tv = Model(name: "tv_retro", category: .Furniture, scaleCompensation: 1.0)
-        self.all = [chairSwan, tv]
+        let tv = Model(name: "tv_retro", category: .Furniture, scaleCompensation: 0.9)
         
         // For Decoration
-        let flowertulip = Model(name: "flower_tulip", category: .Decoration, scaleCompensation: 1.0)
+        let flowertulip = Model(name: "flower_tulip", category: .Decoration, scaleCompensation: 0.7)
         let saucer = Model(name: "cup_saucer_set", category: .Decoration, scaleCompensation: 1.0)
         let teapot = Model(name: "teapot", category: .Decoration, scaleCompensation: 1.0)
-        self.all = [flowertulip, saucer, teapot]
         
         // For Toys
-        let airplane = Model(name: "toy_biplane", category: .Toys, scaleCompensation: 1.0)
+        let airplane = Model(name: "toy_biplane", category: .Toys, scaleCompensation: 0.01)
         let car = Model(name: "toy_car", category: .Toys, scaleCompensation: 1.0)
         let drummer = Model(name: "toy_drummer", category: .Toys, scaleCompensation: 1.0)
         let robot = Model(name: "toy_robot_vintage", category: .Toys, scaleCompensation: 1.0)
         let slide = Model(name: "slide_stylized", category: .Toys, scaleCompensation: 0.8)
-        self.all = [airplane, car, drummer, robot, slide]
         
         // For Musical Instruments
         let fender = Model(name: "fender_stratocaster", category: .MusicalInstruments, scaleCompensation: 1.0)
         let gramophone = Model(name: "gramophone", category: .MusicalInstruments, scaleCompensation: 1.0)
-        self.all = [fender, gramophone]
         
         // For Shoes
         let airforce = Model(name: "AirForce", category: .Shoes, scaleCompensation: 1.0)
         let pegasus = Model(name: "PegasusTrail", category: .Shoes, scaleCompensation: 1.0)
-        self.all = [airforce, pegasus]
         
         // For Automobile
         let huracan = Model(name: "Huracana", category: .Automobile, scaleCompensation: 1.0)
-        self.all = [huracan]
         
         // For Extra
-        let solarPanel = Model(name: "solar_panels_stylized", category: .Extras, scaleCompensation: 0.5)
-        let wateringCan = Model(name: "wateringcan", category: .Decoration, scaleCompensation: 1.0)
-        self.all = [solarPanel, wateringCan]
+        let solarPanel = Model(name: "solar_panels_stylized", category: .Extras, scaleCompensation: 0.2)
+        let wateringCan = Model(name: "wateringcan", category: .Extras, scaleCompensation: 0.5)
+        
+        // Loading all assets to self.all
+        
+        self.all = [chairSwan, tv,flowertulip, saucer, teapot, solarPanel, wateringCan, airplane, car, drummer, robot, slide, fender, gramophone, airforce, pegasus, huracan]
     }
     
     // This should belong in ViewModel but since its just one function I did'nt do it.

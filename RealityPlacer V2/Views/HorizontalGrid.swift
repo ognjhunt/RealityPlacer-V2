@@ -10,6 +10,9 @@ import SwiftUI
 
 struct horizontalGrid: View {
     
+    @EnvironmentObject var placementSetting: PlacementSettings
+    @Binding var isBrowseVisible: Bool
+    
     var title: String
     var items: [Model]
     
@@ -30,7 +33,9 @@ struct horizontalGrid: View {
                     ForEach(0..<items.count, id: \.self) { index in
                         let model = items[index]
                         ItemButton(model: model) {
-                            print("Selected model is", model.name)
+                            placementSetting.selectedModel = model
+                            model.asyncLoad() 
+                            isBrowseVisible.toggle()
                         }
                     }
                 }
@@ -54,7 +59,9 @@ struct ItemButton: View {
                 .frame(height: 150)
                 .aspectRatio(1/1, contentMode: .fit)
                 .background(Color(UIColor.secondarySystemFill))
-                .cornerRadius(8)
+                .mask(RoundedRectangle(cornerRadius: 8))
+                .shadow(radius: 4)
+                .padding(.all,4)
         }
     }
 }
