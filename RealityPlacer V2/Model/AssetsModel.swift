@@ -103,7 +103,7 @@ struct Models {
         let pegasus = Model(name: "PegasusTrail", category: .Shoes, scaleCompensation: 1.0)
         
         // For Automobile
-        let huracan = Model(name: "Huracana", category: .Automobile, scaleCompensation: 1.0)
+        let huracan = Model(name: "Huracan", category: .Automobile, scaleCompensation: 1.0)
         
         // For Extra
         let solarPanel = Model(name: "solar_panels_stylized", category: .Extras, scaleCompensation: 0.2)
