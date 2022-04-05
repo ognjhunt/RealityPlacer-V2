@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6A47649C27F73D0F00E647F0 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 6A47649B27F73D0F00E647F0 /* FocusEntity */; };
 		6A47649E27F73DED00E647F0 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47649D27F73DED00E647F0 /* ARViewContainer.swift */; };
+		6A4CEA9627FC4D4D0063434B /* MultipeerSession in Frameworks */ = {isa = PBXBuildFile; productRef = 6A4CEA9527FC4D4D0063434B /* MultipeerSession */; };
 		6A5F0A2F27F1A7FF003BB7C5 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A2E27F1A7FF003BB7C5 /* ControlView.swift */; };
 		6A5F0A3127F1C717003BB7C5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A3027F1C717003BB7C5 /* BrowseView.swift */; };
 		6A5F0A3327F1D060003BB7C5 /* AssetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A3227F1D060003BB7C5 /* AssetsModel.swift */; };
@@ -93,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A47649C27F73D0F00E647F0 /* FocusEntity in Frameworks */,
+				6A4CEA9627FC4D4D0063434B /* MultipeerSession in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +219,7 @@
 			name = "RealityPlacer V2";
 			packageProductDependencies = (
 				6A47649B27F73D0F00E647F0 /* FocusEntity */,
+				6A4CEA9527FC4D4D0063434B /* MultipeerSession */,
 			);
 			productName = "RealityPlacer V2";
 			productReference = 6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */;
@@ -248,6 +251,7 @@
 			mainGroup = 6AB9318627F0F308003F5E40;
 			packageReferences = (
 				6A47649A27F73D0F00E647F0 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				6A4CEA9427FC4D4D0063434B /* XCRemoteSwiftPackageReference "multipeer-session" */,
 			);
 			productRefGroup = 6AB9319027F0F308003F5E40 /* Products */;
 			projectDirPath = "";
@@ -525,6 +529,14 @@
 				kind = branch;
 			};
 		};
+		6A4CEA9427FC4D4D0063434B /* XCRemoteSwiftPackageReference "multipeer-session" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AddedLayer/multipeer-session";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -532,6 +544,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A47649A27F73D0F00E647F0 /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
+		};
+		6A4CEA9527FC4D4D0063434B /* MultipeerSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A4CEA9427FC4D4D0063434B /* XCRemoteSwiftPackageReference "multipeer-session" */;
+			productName = MultipeerSession;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

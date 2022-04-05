@@ -22,7 +22,7 @@ class CustomARView: ARView {
     private var lidarCancellable: AnyCancellable?
     private var multiuserCancellable: AnyCancellable?
     
-    required init(frame frameRect: CGRect, sessionSettings: SessionSettings, deletionManager: DeletionManager ) {
+    required init(frame frameRect: CGRect, sessionSettings: SessionSettings, deletionManager: DeletionManager) {
         self.sessionSettings = sessionSettings
         self.deletionManager = deletionManager
         super.init(frame: frameRect)
@@ -55,7 +55,7 @@ class CustomARView: ARView {
         updateObjectOcclusion(isEnabled: sessionSettings.isObjectOcculisionEnabled)
         updateMultiuser(isEnabled: sessionSettings.isMultiUserEnabled)
     }
-    
+        
     private func objectDeletion() {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action:
             #selector(handleLongPress(recognise:)))

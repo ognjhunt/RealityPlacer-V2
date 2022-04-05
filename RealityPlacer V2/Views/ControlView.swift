@@ -97,7 +97,7 @@ struct ControlView: View {
             })
             .frame(width: 50, height: 50)
         }
-        .frame(maxWidth: 400)
+        .frame(maxWidth: 800)
         .padding(30)
         .background(Color.black.opacity(0.25))
     }
