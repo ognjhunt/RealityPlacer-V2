@@ -22,8 +22,8 @@ struct SettingsView: View {
                     } label: {
                         Text("Done")
                             .fontWeight(.bold)
-                    }
                 }
+            }
         }
     }
 }

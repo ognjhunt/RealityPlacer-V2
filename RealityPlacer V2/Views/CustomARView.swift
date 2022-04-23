@@ -30,6 +30,7 @@ class CustomARView: ARView {
         configure()
         setupSubscriber()
         activateSettings()
+        objectDeletion()
     }
     
     required init(frame frameRect: CGRect) {
@@ -57,8 +58,7 @@ class CustomARView: ARView {
     }
         
     private func objectDeletion() {
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action:
-            #selector(handleLongPress(recognise:)))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognise:)))
         addGestureRecognizer(longPressGesture)
     }
     
@@ -89,7 +89,6 @@ class CustomARView: ARView {
     }
     
     private func updatePeopleOcclusion(isEnabled: Bool) {
-        print("People occlusion is enabled")
         guard ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth) else {
             return
         }
@@ -102,27 +101,28 @@ class CustomARView: ARView {
             configuration.frameSemantics.insert(.personSegmentationWithDepth)
         }
         self.session.run(configuration)
+        print("DEBUG: People occlusion is enabled")
     }
     
     private func updateObjectOcclusion(isEnabled: Bool) {
-        print("Object occlusion is enabled")
         if environment.sceneUnderstanding.options.contains(.occlusion) {
             environment.sceneUnderstanding.options.remove(.occlusion)
         } else {
             environment.sceneUnderstanding.options.insert(.occlusion)
         }
+        print("DEBUG: Object occlusion is enabled")
     }
     
     private func updateLiDAR(isEnabled: Bool) {
-        print("LIDAR is enabled")
         if debugOptions.contains(.showSceneUnderstanding) {
             debugOptions.remove(.showSceneUnderstanding)
         } else {
             debugOptions.insert(.showSceneUnderstanding)
         }
+        print("DEBUG: LIDAR is enabled")
     }
     
     private func updateMultiuser(isEnabled: Bool) {
-        print("Multiuser is enabled")
+        print("DEBUG: Multiuser is enabled")
     }
 }

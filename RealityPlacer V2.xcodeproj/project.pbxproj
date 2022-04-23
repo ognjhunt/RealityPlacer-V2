@@ -7,36 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A47649C27F73D0F00E647F0 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 6A47649B27F73D0F00E647F0 /* FocusEntity */; };
 		6A47649E27F73DED00E647F0 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47649D27F73DED00E647F0 /* ARViewContainer.swift */; };
-		6A4CEA9627FC4D4D0063434B /* MultipeerSession in Frameworks */ = {isa = PBXBuildFile; productRef = 6A4CEA9527FC4D4D0063434B /* MultipeerSession */; };
+		6A483565281408A3004196C0 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A483564281408A3004196C0 /* FirebaseStorageHelper.swift */; };
+		6A52538B2813F52D0036C61B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6A52538A2813F52D0036C61B /* FirebaseAuth */; };
+		6A52538D2813F52D0036C61B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6A52538C2813F52D0036C61B /* FirebaseFirestore */; };
+		6A52538F2813F52D0036C61B /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 6A52538E2813F52D0036C61B /* FirebaseFirestoreSwift-Beta */; };
+		6A5253912813F52D0036C61B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6A5253902813F52D0036C61B /* FirebaseStorage */; };
+		6A5253932813F52D0036C61B /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 6A5253922813F52D0036C61B /* FirebaseStorageSwift-Beta */; };
+		6A5253952813F5F30036C61B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5253942813F5F30036C61B /* GoogleService-Info.plist */; };
+		6A525397281401540036C61B /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A525396281401540036C61B /* ModelViewModel.swift */; };
 		6A5F0A2F27F1A7FF003BB7C5 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A2E27F1A7FF003BB7C5 /* ControlView.swift */; };
 		6A5F0A3127F1C717003BB7C5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A3027F1C717003BB7C5 /* BrowseView.swift */; };
 		6A5F0A3327F1D060003BB7C5 /* AssetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A3227F1D060003BB7C5 /* AssetsModel.swift */; };
 		6A71EEB627F1F35F005B7AC9 /* HorizontalGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71EEB527F1F35F005B7AC9 /* HorizontalGrid.swift */; };
 		6A71EEB827F1F3FB005B7AC9 /* ModelCategoryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71EEB727F1F3FB005B7AC9 /* ModelCategoryGrid.swift */; };
-		6A71EEC727F2030D005B7AC9 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEBB27F20308005B7AC9 /* toy_robot_vintage.usdz */; };
-		6A71EEC827F2030D005B7AC9 /* wateringcan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEBC27F20309005B7AC9 /* wateringcan.usdz */; };
-		6A71EEC927F2030D005B7AC9 /* AirForce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEBD27F20309005B7AC9 /* AirForce.usdz */; };
-		6A71EECA27F2030D005B7AC9 /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEBE27F2030A005B7AC9 /* teapot.usdz */; };
-		6A71EECB27F2030D005B7AC9 /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEBF27F2030A005B7AC9 /* cup_saucer_set.usdz */; };
-		6A71EECC27F2030D005B7AC9 /* flower_tulip.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC027F2030A005B7AC9 /* flower_tulip.usdz */; };
-		6A71EECD27F2030D005B7AC9 /* PegasusTrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC127F2030B005B7AC9 /* PegasusTrail.usdz */; };
-		6A71EECE27F2030D005B7AC9 /* solar_panels_stylized.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC227F2030B005B7AC9 /* solar_panels_stylized.usdz */; };
-		6A71EECF27F2030D005B7AC9 /* Huracan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC327F2030C005B7AC9 /* Huracan.usdz */; };
-		6A71EED027F2030D005B7AC9 /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC427F2030C005B7AC9 /* toy_car.usdz */; };
-		6A71EED127F2030D005B7AC9 /* toy_drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC527F2030C005B7AC9 /* toy_drummer.usdz */; };
-		6A71EED227F2030D005B7AC9 /* slide_stylized.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6A71EEC627F2030D005B7AC9 /* slide_stylized.usdz */; };
+		6AACEA18280EA90600C69A59 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 6AACEA17280EA90600C69A59 /* FocusEntity */; };
 		6AB9319327F0F308003F5E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9319227F0F308003F5E40 /* AppDelegate.swift */; };
 		6AB9319527F0F308003F5E40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9319427F0F308003F5E40 /* ContentView.swift */; };
 		6AB9319727F0F308003F5E40 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9319627F0F308003F5E40 /* Experience.rcproject */; };
 		6AB9319927F0F309003F5E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9319827F0F309003F5E40 /* Assets.xcassets */; };
 		6AB9319C27F0F309003F5E40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9319B27F0F309003F5E40 /* Preview Assets.xcassets */; };
-		6AB931A927F0F521003F5E40 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A427F0F520003F5E40 /* fender_stratocaster.usdz */; };
-		6AB931AA27F0F521003F5E40 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A527F0F520003F5E40 /* toy_biplane.usdz */; };
-		6AB931AB27F0F521003F5E40 /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A627F0F520003F5E40 /* chair_swan.usdz */; };
-		6AB931AC27F0F521003F5E40 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A727F0F520003F5E40 /* tv_retro.usdz */; };
-		6AB931AD27F0F521003F5E40 /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 6AB931A827F0F521003F5E40 /* gramophone.usdz */; };
 		6AD1005927F463D100026F8F /* DeletionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1005827F463D100026F8F /* DeletionManager.swift */; };
 		6AD1005B27F46AAB00026F8F /* DeletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD1005A27F46AAB00026F8F /* DeletionView.swift */; };
 		6AFDE87D27F30BCE0010D3D0 /* PlacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDE87C27F30BCE0010D3D0 /* PlacementSettings.swift */; };
@@ -49,23 +39,14 @@
 
 /* Begin PBXFileReference section */
 		6A47649D27F73DED00E647F0 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		6A483564281408A3004196C0 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
+		6A5253942813F5F30036C61B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A525396281401540036C61B /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
 		6A5F0A2E27F1A7FF003BB7C5 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		6A5F0A3027F1C717003BB7C5 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		6A5F0A3227F1D060003BB7C5 /* AssetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsModel.swift; sourceTree = "<group>"; };
 		6A71EEB527F1F35F005B7AC9 /* HorizontalGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGrid.swift; sourceTree = "<group>"; };
 		6A71EEB727F1F3FB005B7AC9 /* ModelCategoryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCategoryGrid.swift; sourceTree = "<group>"; };
-		6A71EEBB27F20308005B7AC9 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
-		6A71EEBC27F20309005B7AC9 /* wateringcan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = wateringcan.usdz; sourceTree = "<group>"; };
-		6A71EEBD27F20309005B7AC9 /* AirForce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AirForce.usdz; sourceTree = "<group>"; };
-		6A71EEBE27F2030A005B7AC9 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = teapot.usdz; sourceTree = "<group>"; };
-		6A71EEBF27F2030A005B7AC9 /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup_saucer_set.usdz; sourceTree = "<group>"; };
-		6A71EEC027F2030A005B7AC9 /* flower_tulip.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = flower_tulip.usdz; sourceTree = "<group>"; };
-		6A71EEC127F2030B005B7AC9 /* PegasusTrail.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = PegasusTrail.usdz; sourceTree = "<group>"; };
-		6A71EEC227F2030B005B7AC9 /* solar_panels_stylized.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = solar_panels_stylized.usdz; sourceTree = "<group>"; };
-		6A71EEC327F2030C005B7AC9 /* Huracan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Huracan.usdz; sourceTree = "<group>"; };
-		6A71EEC427F2030C005B7AC9 /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
-		6A71EEC527F2030C005B7AC9 /* toy_drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_drummer.usdz; sourceTree = "<group>"; };
-		6A71EEC627F2030D005B7AC9 /* slide_stylized.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = slide_stylized.usdz; sourceTree = "<group>"; };
 		6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealityPlacer V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB9319227F0F308003F5E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB9319427F0F308003F5E40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,11 +54,6 @@
 		6AB9319827F0F309003F5E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AB9319B27F0F309003F5E40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6AB931A227F0F432003F5E40 /* RealityPlacer-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RealityPlacer-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
-		6AB931A427F0F520003F5E40 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
-		6AB931A527F0F520003F5E40 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
-		6AB931A627F0F520003F5E40 /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
-		6AB931A727F0F520003F5E40 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
-		6AB931A827F0F521003F5E40 /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
 		6AD1005827F463D100026F8F /* DeletionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletionManager.swift; sourceTree = "<group>"; };
 		6AD1005A27F46AAB00026F8F /* DeletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletionView.swift; sourceTree = "<group>"; };
 		6AFDE87C27F30BCE0010D3D0 /* PlacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementSettings.swift; sourceTree = "<group>"; };
@@ -93,8 +69,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A47649C27F73D0F00E647F0 /* FocusEntity in Frameworks */,
-				6A4CEA9627FC4D4D0063434B /* MultipeerSession in Frameworks */,
+				6AACEA18280EA90600C69A59 /* FocusEntity in Frameworks */,
+				6A52538F2813F52D0036C61B /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				6A52538B2813F52D0036C61B /* FirebaseAuth in Frameworks */,
+				6A5253912813F52D0036C61B /* FirebaseStorage in Frameworks */,
+				6A52538D2813F52D0036C61B /* FirebaseFirestore in Frameworks */,
+				6A5253932813F52D0036C61B /* FirebaseStorageSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +133,8 @@
 				6AD1005727F463C000026F8F /* ViewModel */,
 				6A71EEBA27F1F4FC005B7AC9 /* Model */,
 				6A71EEB927F1F4E8005B7AC9 /* Views */,
-				6AB931A327F0F507003F5E40 /* Assets */,
 				6AB9319827F0F309003F5E40 /* Assets.xcassets */,
+				6A5253942813F5F30036C61B /* GoogleService-Info.plist */,
 				6AB931A227F0F432003F5E40 /* RealityPlacer-V2-Info.plist */,
 				6AB9319A27F0F309003F5E40 /* Preview Content */,
 			);
@@ -169,34 +149,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6AB931A327F0F507003F5E40 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				6AB931A627F0F520003F5E40 /* chair_swan.usdz */,
-				6AB931A427F0F520003F5E40 /* fender_stratocaster.usdz */,
-				6AB931A827F0F521003F5E40 /* gramophone.usdz */,
-				6AB931A527F0F520003F5E40 /* toy_biplane.usdz */,
-				6AB931A727F0F520003F5E40 /* tv_retro.usdz */,
-				6A71EEBD27F20309005B7AC9 /* AirForce.usdz */,
-				6A71EEBF27F2030A005B7AC9 /* cup_saucer_set.usdz */,
-				6A71EEC027F2030A005B7AC9 /* flower_tulip.usdz */,
-				6A71EEC327F2030C005B7AC9 /* Huracan.usdz */,
-				6A71EEC127F2030B005B7AC9 /* PegasusTrail.usdz */,
-				6A71EEC627F2030D005B7AC9 /* slide_stylized.usdz */,
-				6A71EEC227F2030B005B7AC9 /* solar_panels_stylized.usdz */,
-				6A71EEBE27F2030A005B7AC9 /* teapot.usdz */,
-				6A71EEC427F2030C005B7AC9 /* toy_car.usdz */,
-				6A71EEC527F2030C005B7AC9 /* toy_drummer.usdz */,
-				6A71EEBB27F20308005B7AC9 /* toy_robot_vintage.usdz */,
-				6A71EEBC27F20309005B7AC9 /* wateringcan.usdz */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		6AD1005727F463C000026F8F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				6AD1005827F463D100026F8F /* DeletionManager.swift */,
+				6A525396281401540036C61B /* ModelViewModel.swift */,
+				6A483564281408A3004196C0 /* FirebaseStorageHelper.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,8 +176,12 @@
 			);
 			name = "RealityPlacer V2";
 			packageProductDependencies = (
-				6A47649B27F73D0F00E647F0 /* FocusEntity */,
-				6A4CEA9527FC4D4D0063434B /* MultipeerSession */,
+				6AACEA17280EA90600C69A59 /* FocusEntity */,
+				6A52538A2813F52D0036C61B /* FirebaseAuth */,
+				6A52538C2813F52D0036C61B /* FirebaseFirestore */,
+				6A52538E2813F52D0036C61B /* FirebaseFirestoreSwift-Beta */,
+				6A5253902813F52D0036C61B /* FirebaseStorage */,
+				6A5253922813F52D0036C61B /* FirebaseStorageSwift-Beta */,
 			);
 			productName = "RealityPlacer V2";
 			productReference = 6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */;
@@ -250,8 +212,8 @@
 			);
 			mainGroup = 6AB9318627F0F308003F5E40;
 			packageReferences = (
-				6A47649A27F73D0F00E647F0 /* XCRemoteSwiftPackageReference "FocusEntity" */,
-				6A4CEA9427FC4D4D0063434B /* XCRemoteSwiftPackageReference "multipeer-session" */,
+				6AACEA16280EA90600C69A59 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6AB9319027F0F308003F5E40 /* Products */;
 			projectDirPath = "";
@@ -267,25 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A71EEC727F2030D005B7AC9 /* toy_robot_vintage.usdz in Resources */,
-				6A71EECD27F2030D005B7AC9 /* PegasusTrail.usdz in Resources */,
-				6A71EECF27F2030D005B7AC9 /* Huracan.usdz in Resources */,
-				6A71EECE27F2030D005B7AC9 /* solar_panels_stylized.usdz in Resources */,
-				6AB931AC27F0F521003F5E40 /* tv_retro.usdz in Resources */,
 				6AB9319C27F0F309003F5E40 /* Preview Assets.xcassets in Resources */,
-				6A71EED227F2030D005B7AC9 /* slide_stylized.usdz in Resources */,
 				6AB9319927F0F309003F5E40 /* Assets.xcassets in Resources */,
-				6AB931AA27F0F521003F5E40 /* toy_biplane.usdz in Resources */,
-				6AB931AB27F0F521003F5E40 /* chair_swan.usdz in Resources */,
-				6A71EECA27F2030D005B7AC9 /* teapot.usdz in Resources */,
-				6A71EEC927F2030D005B7AC9 /* AirForce.usdz in Resources */,
-				6A71EECB27F2030D005B7AC9 /* cup_saucer_set.usdz in Resources */,
-				6A71EEC827F2030D005B7AC9 /* wateringcan.usdz in Resources */,
-				6A71EECC27F2030D005B7AC9 /* flower_tulip.usdz in Resources */,
-				6AB931AD27F0F521003F5E40 /* gramophone.usdz in Resources */,
-				6AB931A927F0F521003F5E40 /* fender_stratocaster.usdz in Resources */,
-				6A71EED027F2030D005B7AC9 /* toy_car.usdz in Resources */,
-				6A71EED127F2030D005B7AC9 /* toy_drummer.usdz in Resources */,
+				6A5253952813F5F30036C61B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +250,7 @@
 				6AFDE89927F30F4C0010D3D0 /* PlacementView.swift in Sources */,
 				6A47649E27F73DED00E647F0 /* ARViewContainer.swift in Sources */,
 				6AFDE8A027F3238F0010D3D0 /* SessionSettings.swift in Sources */,
+				6A525397281401540036C61B /* ModelViewModel.swift in Sources */,
 				6AB9319527F0F308003F5E40 /* ContentView.swift in Sources */,
 				6A5F0A3127F1C717003BB7C5 /* BrowseView.swift in Sources */,
 				6AB9319327F0F308003F5E40 /* AppDelegate.swift in Sources */,
@@ -311,6 +258,7 @@
 				6AFDE89E27F319D70010D3D0 /* CustomARView.swift in Sources */,
 				6AD1005B27F46AAB00026F8F /* DeletionView.swift in Sources */,
 				6A71EEB827F1F3FB005B7AC9 /* ModelCategoryGrid.swift in Sources */,
+				6A483565281408A3004196C0 /* FirebaseStorageHelper.swift in Sources */,
 				6AD1005927F463D100026F8F /* DeletionManager.swift in Sources */,
 				6AFDE8A227F326120010D3D0 /* SettingsView.swift in Sources */,
 			);
@@ -441,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RealityPlacer V2/Preview Content\"";
-				DEVELOPMENT_TEAM = KH8B299556;
+				DEVELOPMENT_TEAM = HG5H24J47G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RealityPlacer-V2-Info.plist";
@@ -473,7 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RealityPlacer V2/Preview Content\"";
-				DEVELOPMENT_TEAM = KH8B299556;
+				DEVELOPMENT_TEAM = HG5H24J47G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RealityPlacer-V2-Info.plist";
@@ -521,7 +469,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6A47649A27F73D0F00E647F0 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+		6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		6AACEA16280EA90600C69A59 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
 			requirement = {
@@ -529,26 +485,38 @@
 				kind = branch;
 			};
 		};
-		6A4CEA9427FC4D4D0063434B /* XCRemoteSwiftPackageReference "multipeer-session" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AddedLayer/multipeer-session";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6A47649B27F73D0F00E647F0 /* FocusEntity */ = {
+		6A52538A2813F52D0036C61B /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6A47649A27F73D0F00E647F0 /* XCRemoteSwiftPackageReference "FocusEntity" */;
-			productName = FocusEntity;
+			package = 6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
-		6A4CEA9527FC4D4D0063434B /* MultipeerSession */ = {
+		6A52538C2813F52D0036C61B /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6A4CEA9427FC4D4D0063434B /* XCRemoteSwiftPackageReference "multipeer-session" */;
-			productName = MultipeerSession;
+			package = 6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6A52538E2813F52D0036C61B /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		6A5253902813F52D0036C61B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6A5253922813F52D0036C61B /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A5253892813F52D0036C61B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+		6AACEA17280EA90600C69A59 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AACEA16280EA90600C69A59 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

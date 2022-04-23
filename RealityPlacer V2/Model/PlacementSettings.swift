@@ -13,17 +13,17 @@ import Combine
 class PlacementSettings: ObservableObject {
     @Published var selectedModel: Model? {
         willSet(newValue) {
-            print("Selected model for placementSettings is", newValue?.name ?? "nil")
+            print("DEBUG: Selected model for placementSettings is", newValue?.name ?? "nil")
         }
     }
     
     @Published var confirmedModel: Model? {
         willSet(newValue) {
             guard let model = newValue else {
-                print("Clearing confirmed model")
+                print("DEBUG: Clearing confirmed model")
                 return
             }
-            print("Confirmed model for placementSettings is", model.name)
+            print("DEBUG: Confirmed model for placementSettings is", model.name)
             recentlyPlaced.append(model)
         }
     }

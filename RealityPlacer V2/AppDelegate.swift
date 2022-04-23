@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct RealityPlacerV2: App {
@@ -13,6 +14,20 @@ struct RealityPlacerV2: App {
     @StateObject var placementSettings = PlacementSettings()
     @StateObject var sessionSettings = SessionSettings()
     @StateObject var deletionManager = DeletionManager()
+    
+    init() {
+        FirebaseApp.configure()
+        
+        // Anonymous Auth
+        Auth.auth().signInAnonymously { authResult, error in
+            guard let user = authResult?.user else {
+                print(" DEBUG: Authentication failed for firebase")
+                return
+            }
+            let uid = user.uid
+            print("DEBUG: Authentication succesfull with \(uid) as UID")
+        }
+    }
     
     var body: some Scene {
         WindowGroup {

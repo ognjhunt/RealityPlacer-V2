@@ -47,7 +47,7 @@ struct horizontalGrid: View {
 }
 
 struct ItemButton: View {
-    let model: Model
+    @ObservedObject var model: Model
     let action: () -> Void
     
     var body: some View {

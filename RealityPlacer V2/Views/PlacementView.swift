@@ -13,12 +13,12 @@ struct PlacementView: View {
     var body: some View {
         HStack {
             PlacementButton(systemIcon: "xmark.circle") {
-                print("Cancelled button pressed")
+                print("DEBUG: Cancelled button pressed")
                 placementSettings.selectedModel = nil
             }
             Spacer()
             PlacementButton(systemIcon: "checkmark.circle") {
-                print("Confirmed button pressed")
+                print("DEBUG: Confirmed button pressed")
                 placementSettings.confirmedModel = placementSettings.selectedModel
                 placementSettings.selectedModel = nil
             }

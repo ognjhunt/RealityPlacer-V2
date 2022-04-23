@@ -42,7 +42,7 @@ struct ARViewContainer: UIViewRepresentable {
         let anchorEntity = AnchorEntity(plane: .any)
         anchorEntity.addChild(cloneEntity)
         arView.scene.addAnchor(anchorEntity)
-        print("Added the model to the scene")
+        print("DEBUG: Added the model to the scene")
     }
 }
 

@@ -58,7 +58,7 @@ struct ControlView: View {
         // Recents button
         HStack(alignment: .center) {
 //            Button {
-//                print("Most recent button pressed")
+//                print(" DEBUG: Most recent button pressed")
 //            } label: {
 //                Image(systemName: "clock")
 //                    .font(.largeTitle)

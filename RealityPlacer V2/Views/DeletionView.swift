@@ -10,7 +10,7 @@ import SwiftUI
 
 //struct DeletionView: View {
 //    @EnvironmentObject var deletionManager: DeletionManager
-//    
+//
 //    var body: some View {
 //        HStack {
 //            Spacer()
@@ -22,8 +22,8 @@ import SwiftUI
 //                guard let anchor = deletionManager.entitySelectedForDeletion?.anchor
 //                else { return }
 //                let anchorAnalyser = anchor.anchorIdentifier
-////                if let index = self.sceneManager.anchorEntities.firstIndex(where: { $0.anchorIdentifier == anchorAnalyser}) {
-////                    sceneManager.anchorEntities.remove(at: index)
+//                if let index = self.sceneManager.anchorEntities.firstIndex(where: { $0.anchorIdentifier == anchorAnalyser}) {
+//                    sceneManager.anchorEntities.remove(at: index)
 //                }
 //                anchor.removeFromParent()
 //                deletionManager.entitySelectedForDeletion = nil
@@ -32,7 +32,6 @@ import SwiftUI
 //        }
 //        .padding(.bottom, 30)
 //    }
-//}
 
 struct DeletionButton: View {
     let iconName: String
