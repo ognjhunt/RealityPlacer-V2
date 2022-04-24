@@ -14,6 +14,7 @@ struct RealityPlacerV2: App {
     @StateObject var placementSettings = PlacementSettings()
     @StateObject var sessionSettings = SessionSettings()
     @StateObject var deletionManager = DeletionManager()
+    @StateObject var sceneManager = SceneManager()
     
     init() {
         FirebaseApp.configure()
@@ -35,6 +36,7 @@ struct RealityPlacerV2: App {
                 .environmentObject(placementSettings)
                 .environmentObject(sessionSettings)
                 .environmentObject(deletionManager)
+                .environmentObject(sceneManager)
         }
     }
 }

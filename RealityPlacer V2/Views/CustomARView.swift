@@ -44,17 +44,20 @@ class CustomARView: ARView {
     private func configure() {
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal, .vertical]
+        config.isAutoFocusEnabled = true
+        config.environmentTexturing = .automatic
+        config.wantsHDREnvironmentTextures = true
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             config.sceneReconstruction = .mesh
         }
         session.run(config)
     }
-    
+     
     private func activateSettings() {
-        updatePeopleOcclusion(isEnabled: sessionSettings.isPeopleOcculisionEnabled)
-        updateLiDAR(isEnabled: sessionSettings.isLidarEnabled)
-        updateObjectOcclusion(isEnabled: sessionSettings.isObjectOcculisionEnabled)
-        updateMultiuser(isEnabled: sessionSettings.isMultiUserEnabled)
+        self.updatePeopleOcclusion(isEnabled: sessionSettings.isPeopleOcculisionEnabled)
+        self.updateLiDAR(isEnabled: sessionSettings.isLidarEnabled)
+        self.updateObjectOcclusion(isEnabled: sessionSettings.isObjectOcculisionEnabled)
+        self.updateMultiuser(isEnabled: sessionSettings.isMultiUserEnabled)
     }
         
     private func objectDeletion() {
@@ -99,9 +102,9 @@ class CustomARView: ARView {
             configuration.frameSemantics.remove(.personSegmentationWithDepth)
         } else {
             configuration.frameSemantics.insert(.personSegmentationWithDepth)
+            print("DEBUG: People occlusion is toggled on")
         }
         self.session.run(configuration)
-        print("DEBUG: People occlusion is enabled")
     }
     
     private func updateObjectOcclusion(isEnabled: Bool) {
@@ -109,8 +112,8 @@ class CustomARView: ARView {
             environment.sceneUnderstanding.options.remove(.occlusion)
         } else {
             environment.sceneUnderstanding.options.insert(.occlusion)
+            print("DEBUG: Object occlusion is toggled on")
         }
-        print("DEBUG: Object occlusion is enabled")
     }
     
     private func updateLiDAR(isEnabled: Bool) {
@@ -118,11 +121,11 @@ class CustomARView: ARView {
             debugOptions.remove(.showSceneUnderstanding)
         } else {
             debugOptions.insert(.showSceneUnderstanding)
+            print("DEBUG: LIDAR scene understanding is toggled on")
         }
-        print("DEBUG: LIDAR is enabled")
     }
     
     private func updateMultiuser(isEnabled: Bool) {
-        print("DEBUG: Multiuser is enabled")
+        print("DEBUG: Multiuser is not currently implemented")
     }
 }

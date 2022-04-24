@@ -14,66 +14,83 @@ struct ControlView: View {
     @EnvironmentObject var placementSettings: PlacementSettings
     @EnvironmentObject var deletionManager: DeletionManager
     
-    @State var isControlVisible: Bool = true
     @State var isBrowserVisible: Bool = false
     @State var isSettingsVisible: Bool = false
+    @State var selectedControlMode: Int = 0
     
     var body: some View {
         VStack {
-            controlVisibilityButton
             Spacer()
             if self.placementSettings.selectedModel == nil {
-                if isControlVisible {
-                    controlButtonBar
-                }
+                ControlModePicker(selectedControlMode: $selectedControlMode)
+                HomeControlView(isBrowserVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
             } else {
                 PlacementView()
             }
         }
     }
+}
+
+// MARK: Main Control View
+enum ControlMode: String, CaseIterable {
+    case home, scene
+}
+
+struct ControlModePicker: View {
+    @Binding var selectedControlMode: Int
+    let controlModes = ControlMode.allCases
     
-    private var controlVisibilityButton: some View {
-        HStack {
-            Spacer()
-            ZStack {
-                Color.black.opacity(0.25)
-                Button {
-                    isControlVisible.toggle()
-                } label: {
-                    Image(systemName: "dock.rectangle")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .buttonStyle(.plain)
-                }
-            }
-            .frame(width: 50, height: 50)
-            .cornerRadius(8)
-        }
-        .padding(.top, 45)
-        .padding(.trailing, 20)
+    init(selectedControlMode: Binding<Int>) {
+        self._selectedControlMode = selectedControlMode
+        UISegmentedControl.appearance().selectedSegmentTintColor = .clear
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(.yellow)], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(.white)], for: .normal)
+        UISegmentedControl.appearance().backgroundColor = UIColor(Color.black.opacity(0.25))
     }
     
-    private var controlButtonBar: some View {
-        
-        // Recents button
+    var body: some View {
+        Picker(selection: $selectedControlMode, label: Text("Select Control Mode")) {
+            ForEach(0..<controlModes.count, id: \.self) { index in
+                Text(controlModes[index].rawValue.uppercased()).tag(index)
+            }
+        }
+        .pickerStyle(.segmented)
+        .frame(maxWidth: 400)
+        .padding(.horizontal, 10)
+    }
+}
+
+// MARK: Home Control View
+
+struct HomeControlView: View {
+    
+    @Binding var isBrowserVisible: Bool
+    @Binding var isSettingsVisible: Bool
+    
+    var body: some View {
         HStack(alignment: .center) {
-//            Button {
-//                print(" DEBUG: Most recent button pressed")
-//            } label: {
-//                Image(systemName: "clock")
-//                    .font(.largeTitle)
-//                    .foregroundColor(.white)
-//                    .buttonStyle(.plain)
-//            }
-//            .frame(width: 50, height: 50)
-//            Spacer()
-             
+            
             // Browse button
             Button {
                 isBrowserVisible.toggle()
             } label: {
                 Image(systemName: "square.grid.2x2")
-                    .font(.largeTitle)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .buttonStyle(.plain)
+            }
+            .sheet(isPresented: $isBrowserVisible, content: {
+                BrowseView(isBrowseVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
+            })
+            .frame(width: 50, height: 50)
+            Spacer()
+            
+            // Screenshot button
+            Button {
+                print("DEBUG: Screenshot button pressed")
+            } label: {
+                Image(systemName: "camera")
+                    .font(.title)
                     .foregroundColor(.white)
                     .buttonStyle(.plain)
             }
@@ -88,7 +105,7 @@ struct ControlView: View {
                 isSettingsVisible.toggle()
             } label: {
                 Image(systemName: "slider.horizontal.3")
-                    .font(.largeTitle)
+                    .font(.title)
                     .foregroundColor(.white)
                     .buttonStyle(.plain)
             }
@@ -98,7 +115,9 @@ struct ControlView: View {
             .frame(width: 50, height: 50)
         }
         .frame(maxWidth: 800)
-        .padding(30)
+        .padding(18)
         .background(Color.black.opacity(0.25))
     }
 }
+
+// MARK: Scene Control View

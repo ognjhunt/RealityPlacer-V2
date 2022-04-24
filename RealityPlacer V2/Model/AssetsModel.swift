@@ -14,6 +14,7 @@ enum AssetsModel: String, CaseIterable {
     case Furniture
     case Decoration
     case Toys
+    case Technology
     case MusicalInstruments
     case Shoes
     case Automobile
@@ -28,6 +29,8 @@ enum AssetsModel: String, CaseIterable {
                 return "Decoration"
             case .Toys:
                 return "Toys"
+            case .Technology:
+                return "Technology"
             case .MusicalInstruments:
                 return "Musical Instruments"
             case .Shoes:

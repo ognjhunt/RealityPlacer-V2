@@ -26,6 +26,7 @@ struct ContentView_Previews : PreviewProvider {
             .environmentObject(PlacementSettings())
             .environmentObject(SessionSettings())
             .environmentObject(DeletionManager())
+            .environmentObject(SceneManager())
     }
 }
 #endif
