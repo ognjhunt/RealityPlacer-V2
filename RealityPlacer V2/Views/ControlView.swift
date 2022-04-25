@@ -13,6 +13,8 @@ struct ControlView: View {
     
     @EnvironmentObject var placementSettings: PlacementSettings
     @EnvironmentObject var deletionManager: DeletionManager
+    @EnvironmentObject var sceneManager: SceneManager
+    @EnvironmentObject var viewModel: ModelViewModel
     
     @State var isBrowserVisible: Bool = false
     @State var isSettingsVisible: Bool = false
@@ -23,10 +25,17 @@ struct ControlView: View {
             Spacer()
             if self.placementSettings.selectedModel == nil {
                 ControlModePicker(selectedControlMode: $selectedControlMode)
-                HomeControlView(isBrowserVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
+                if selectedControlMode == 0 {
+                    HomeControlView(isBrowserVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
+                } else {
+                    SceneControlView(sceneManager: _sceneManager)
+                }
             } else {
                 PlacementView()
             }
+        }
+        .onAppear() {
+            viewModel.fetchData()
         }
     }
 }
@@ -64,6 +73,8 @@ struct ControlModePicker: View {
 
 struct HomeControlView: View {
     
+    @EnvironmentObject var placementSettings: PlacementSettings
+    
     @Binding var isBrowserVisible: Bool
     @Binding var isSettingsVisible: Bool
     
@@ -81,6 +92,7 @@ struct HomeControlView: View {
             }
             .sheet(isPresented: $isBrowserVisible, content: {
                 BrowseView(isBrowseVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
+                    .environmentObject(placementSettings)
             })
             .frame(width: 50, height: 50)
             Spacer()
@@ -121,3 +133,63 @@ struct HomeControlView: View {
 }
 
 // MARK: Scene Control View
+
+struct SceneControlView: View {
+    
+    @EnvironmentObject var sceneManager: SceneManager
+    
+    var body: some View {
+        
+        HStack(alignment: .center) {
+            // Save scene button
+            if sceneManager.isPersistenceAvailable {
+                Button {
+                    sceneManager.shouldSaveSceneToSystem = true
+                    print("DEBUG: Save scene button clicked")
+                    let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                    impactMed.impactOccurred()
+                } label: {
+                    Image(systemName: "square.and.arrow.down")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .buttonStyle(.plain)
+                }
+                .frame(width: 50, height: 50)
+                Spacer()
+            }
+            
+            // Load scene button
+            if (sceneManager.scenePersistenceData != nil) {
+                Button {
+                    sceneManager.shouldLoadSceneToSystem = true
+                    print("DEBUG: Load scene button pressed")
+                    let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                    impactMed.impactOccurred()
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .buttonStyle(.plain)
+                }
+                .frame(width: 50, height: 50)
+                Spacer()
+            }
+            
+            // Delete button
+            Button {
+                print("DEBUG: Delete scene button pressed")
+                let impactMed = UIImpactFeedbackGenerator(style: .heavy)
+                impactMed.impactOccurred()
+            } label: {
+                Image(systemName: "trash")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .buttonStyle(.plain)
+            }
+            .frame(width: 50, height: 50)
+        }
+        .frame(maxWidth: 800)
+        .padding(18)
+        .background(Color.black.opacity(0.25))
+    }
+}

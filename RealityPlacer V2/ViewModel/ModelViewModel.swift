@@ -29,4 +29,10 @@ class ModelViewModel: ObservableObject {
             }
         }
     }
+    
+    func clearModelEntitiesFromMemory(){
+        for model in models {
+            model.modelEntity = nil
+        }
+    }
 }

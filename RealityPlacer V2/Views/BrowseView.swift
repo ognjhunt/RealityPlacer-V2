@@ -35,9 +35,8 @@ struct BrowseView: View {
 
 struct ModelCategoryGrid: View {
     
+    @EnvironmentObject var viewModel: ModelViewModel
     @Binding var isBrowseVisible: Bool
-    
-    @ObservedObject private var viewModel = ModelViewModel()
     
     var body: some View {
         VStack {
@@ -46,9 +45,6 @@ struct ModelCategoryGrid: View {
                     horizontalGrid(isBrowseVisible: $isBrowseVisible, title: category.label, items: modelsbyCategory)
                 }
             }
-        }
-        .onAppear() {
-            viewModel.fetchData()
         }
     }
 }
@@ -79,7 +75,11 @@ struct horizontalGrid: View {
                         let model = items[index]
                         ItemButton(model: model) {
                             placementSetting.selectedModel = model
-                            model.asyncLoad()
+                            model.asyncLoad { completed, error in
+                                if completed {
+                                    placementSetting.selectedModel = model
+                                }
+                            }
                             isBrowseVisible.toggle()
                         }
                     }

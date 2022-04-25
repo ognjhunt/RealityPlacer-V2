@@ -19,7 +19,8 @@ struct PlacementView: View {
             Spacer()
             PlacementButton(systemIcon: "checkmark.circle") {
                 print("DEBUG: Confirmed button pressed")
-                placementSettings.confirmedModel = placementSettings.selectedModel
+                let modelAnchor = ModelAnchor(model: placementSettings.selectedModel!, anchor: nil)
+                placementSettings.modelsConfirmedForPlacement.append(modelAnchor)
                 placementSettings.selectedModel = nil
             }
         }

@@ -17,6 +17,18 @@ class CustomARView: ARView {
     var sessionSettings: SessionSettings
     var deletionManager: DeletionManager
     
+    var defaultConfig: ARWorldTrackingConfiguration {
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = [.horizontal, .vertical]
+        config.isAutoFocusEnabled = true
+        config.environmentTexturing = .automatic
+        config.wantsHDREnvironmentTextures = true
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
+            config.sceneReconstruction = .mesh
+        }
+        return config
+    }
+    
     private var peopleOcclusionCancellable: AnyCancellable?
     private var objectOcclusionCancellable: AnyCancellable?
     private var lidarCancellable: AnyCancellable?
@@ -42,15 +54,7 @@ class CustomARView: ARView {
     }
     
     private func configure() {
-        let config = ARWorldTrackingConfiguration()
-        config.planeDetection = [.horizontal, .vertical]
-        config.isAutoFocusEnabled = true
-        config.environmentTexturing = .automatic
-        config.wantsHDREnvironmentTextures = true
-        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
-            config.sceneReconstruction = .mesh
-        }
-        session.run(config)
+        session.run(defaultConfig)
     }
      
     private func activateSettings() {

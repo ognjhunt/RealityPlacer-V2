@@ -19,6 +19,7 @@
 		6A5F0A2F27F1A7FF003BB7C5 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A2E27F1A7FF003BB7C5 /* ControlView.swift */; };
 		6A5F0A3127F1C717003BB7C5 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A3027F1C717003BB7C5 /* BrowseView.swift */; };
 		6A5F0A3327F1D060003BB7C5 /* AssetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F0A3227F1D060003BB7C5 /* AssetsModel.swift */; };
+		6A94D2372816CB13003BDA44 /* ScenePersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D2362816CB13003BDA44 /* ScenePersistenceHelper.swift */; };
 		6AACEA18280EA90600C69A59 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 6AACEA17280EA90600C69A59 /* FocusEntity */; };
 		6AB9319327F0F308003F5E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9319227F0F308003F5E40 /* AppDelegate.swift */; };
 		6AB9319527F0F308003F5E40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9319427F0F308003F5E40 /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 		6A5F0A2E27F1A7FF003BB7C5 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		6A5F0A3027F1C717003BB7C5 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		6A5F0A3227F1D060003BB7C5 /* AssetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsModel.swift; sourceTree = "<group>"; };
+		6A94D2362816CB13003BDA44 /* ScenePersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePersistenceHelper.swift; sourceTree = "<group>"; };
 		6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealityPlacer V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB9319227F0F308003F5E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB9319427F0F308003F5E40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				6A483564281408A3004196C0 /* FirebaseStorageHelper.swift */,
+				6A94D2362816CB13003BDA44 /* ScenePersistenceHelper.swift */,
 				6A525396281401540036C61B /* ModelViewModel.swift */,
 				6AD1005827F463D100026F8F /* DeletionManager.swift */,
 			);
@@ -238,6 +241,7 @@
 				6A5F0A2F27F1A7FF003BB7C5 /* ControlView.swift in Sources */,
 				6AFDE87D27F30BCE0010D3D0 /* PlacementSettings.swift in Sources */,
 				6AFDE89927F30F4C0010D3D0 /* PlacementView.swift in Sources */,
+				6A94D2372816CB13003BDA44 /* ScenePersistenceHelper.swift in Sources */,
 				6A47649E27F73DED00E647F0 /* ARViewContainer.swift in Sources */,
 				6AFDE8A027F3238F0010D3D0 /* SessionSettings.swift in Sources */,
 				6A525397281401540036C61B /* ModelViewModel.swift in Sources */,

@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 import RealityKit
 import Combine
+import ARKit
+
+struct  ModelAnchor {
+    var model: Model
+    var anchor: ARAnchor?
+}
 
 class PlacementSettings: ObservableObject {
     @Published var selectedModel: Model? {
@@ -17,18 +23,9 @@ class PlacementSettings: ObservableObject {
         }
     }
     
-    @Published var confirmedModel: Model? {
-        willSet(newValue) {
-            guard let model = newValue else {
-                print("DEBUG: Clearing confirmed model")
-                return
-            }
-            print("DEBUG: Confirmed model for placementSettings is", model.name)
-            recentlyPlaced.append(model)
-        }
-    }
-    
     @Published var recentlyPlaced: [Model] = []
+    
+    var modelsConfirmedForPlacement: [ModelAnchor] = []
     
     var sceneObserver: Cancellable?
 }
