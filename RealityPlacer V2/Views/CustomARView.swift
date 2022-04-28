@@ -107,7 +107,7 @@ class CustomARView: ARView {
             configuration.frameSemantics.remove(.personSegmentationWithDepth)
         } else {
             configuration.frameSemantics.insert(.personSegmentationWithDepth)
-            print("DEBUG: People occlusion is toggled on")
+            print("DEBUG: People occlusion is toggled")
         }
         self.session.run(configuration)
     }
@@ -117,7 +117,7 @@ class CustomARView: ARView {
             environment.sceneUnderstanding.options.remove(.occlusion)
         } else {
             environment.sceneUnderstanding.options.insert(.occlusion)
-            print("DEBUG: Object occlusion is toggled on")
+            print("DEBUG: Object occlusion is toggled")
         }
     }
     
@@ -126,7 +126,7 @@ class CustomARView: ARView {
             debugOptions.remove(.showSceneUnderstanding)
         } else {
             debugOptions.insert(.showSceneUnderstanding)
-            print("DEBUG: LIDAR scene understanding is toggled on")
+            print("DEBUG: LIDAR scene understanding is toggled")
         }
     }
     

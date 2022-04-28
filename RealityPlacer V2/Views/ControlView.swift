@@ -23,15 +23,19 @@ struct ControlView: View {
     var body: some View {
         VStack {
             Spacer()
-            if self.placementSettings.selectedModel == nil {
-                ControlModePicker(selectedControlMode: $selectedControlMode)
-                if selectedControlMode == 0 {
-                    HomeControlView(isBrowserVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
-                } else {
-                    SceneControlView(sceneManager: _sceneManager)
-                }
+            if self.deletionManager.entitySelectedForDeletion != nil {
+                DeletionView()
             } else {
-                PlacementView()
+                if self.placementSettings.selectedModel == nil {
+                    ControlModePicker(selectedControlMode: $selectedControlMode)
+                    if selectedControlMode == 0 {
+                        HomeControlView(isBrowserVisible: $isBrowserVisible, isSettingsVisible: $isSettingsVisible)
+                    } else {
+                        SceneControlView(sceneManager: _sceneManager)
+                    }
+                } else {
+                    PlacementView()
+                }
             }
         }
         .onAppear() {
@@ -178,6 +182,9 @@ struct SceneControlView: View {
             // Delete button
             Button {
                 print("DEBUG: Delete scene button pressed")
+                for anchorEntity in sceneManager.anchorEntities {
+                    anchorEntity.removeFromParent()
+                }
                 let impactMed = UIImpactFeedbackGenerator(style: .heavy)
                 impactMed.impactOccurred()
             } label: {

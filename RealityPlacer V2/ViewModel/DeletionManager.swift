@@ -12,7 +12,6 @@ import RealityKit
 class DeletionManager: ObservableObject {
     
     @Published var entitySelectedForDeletion: ModelEntity? = nil {
-        
         willSet(newValue) {
             if entitySelectedForDeletion == nil, let newlySelectedModelEntity = newValue {
                 let component = ModelDebugOptionsComponent(visualizationMode: .lightingDiffuse)
@@ -23,6 +22,7 @@ class DeletionManager: ObservableObject {
                 newlySelectedModelEnity.modelDebugOptions = component
             } else if newValue == nil {
                 entitySelectedForDeletion?.modelDebugOptions = nil
+                print("DEBUG: Clearing entity selected for delition")
             }
         }
     }
