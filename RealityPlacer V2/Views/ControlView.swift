@@ -46,7 +46,9 @@ enum ControlMode: String, CaseIterable {
 }
 
 struct ControlModePicker: View {
+    
     @Binding var selectedControlMode: Int
+    
     let controlModes = ControlMode.allCases
     
     init(selectedControlMode: Binding<Int>) {
@@ -70,7 +72,6 @@ struct ControlModePicker: View {
 }
 
 // MARK: Home Control View
-
 struct HomeControlView: View {
     
     @EnvironmentObject var placementSettings: PlacementSettings
@@ -133,7 +134,6 @@ struct HomeControlView: View {
 }
 
 // MARK: Scene Control View
-
 struct SceneControlView: View {
     
     @EnvironmentObject var sceneManager: SceneManager

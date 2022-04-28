@@ -13,6 +13,7 @@ import ARKit
 private let anchorNamePrefix = "model-"
 
 struct ARViewContainer: UIViewRepresentable {
+    
     @EnvironmentObject var placementSettings: PlacementSettings
     @EnvironmentObject var sessionSettings: SessionSettings
     @EnvironmentObject var deletionManager: DeletionManager
@@ -77,7 +78,6 @@ struct ARViewContainer: UIViewRepresentable {
 
 
 // MARK: Storage
-
 class SceneManager: ObservableObject {
     @Published var isPersistenceAvailable: Bool = false
     @Published var anchorEntities: [AnchorEntity] = []
@@ -136,7 +136,6 @@ extension ARViewContainer {
 }
 
 // MARK: AR Coordinator
-
 extension ARViewContainer {
     class Coordinator: NSObject, ARSessionDelegate {
         var parent: ARViewContainer

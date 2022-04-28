@@ -36,6 +36,7 @@ struct BrowseView: View {
 struct ModelCategoryGrid: View {
     
     @EnvironmentObject var viewModel: ModelViewModel
+    
     @Binding var isBrowseVisible: Bool
     
     var body: some View {
@@ -52,6 +53,7 @@ struct ModelCategoryGrid: View {
 struct horizontalGrid: View {
     
     @EnvironmentObject var placementSetting: PlacementSettings
+    
     @Binding var isBrowseVisible: Bool
     
     var title: String
@@ -92,7 +94,9 @@ struct horizontalGrid: View {
 }
 
 struct ItemButton: View {
+    
     @ObservedObject var model: Model
+    
     let action: () -> Void
     
     var body: some View {

@@ -17,6 +17,7 @@ struct  ModelAnchor {
 }
 
 class PlacementSettings: ObservableObject {
+    
     @Published var selectedModel: Model? {
         willSet(newValue) {
             print("DEBUG: Selected model for placementSettings is", newValue?.name ?? "nil")
@@ -26,6 +27,5 @@ class PlacementSettings: ObservableObject {
     @Published var recentlyPlaced: [Model] = []
     
     var modelsConfirmedForPlacement: [ModelAnchor] = []
-    
     var sceneObserver: Cancellable?
 }

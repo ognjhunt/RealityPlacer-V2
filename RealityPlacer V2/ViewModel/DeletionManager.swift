@@ -10,7 +10,9 @@ import SwiftUI
 import RealityKit
 
 class DeletionManager: ObservableObject {
+    
     @Published var entitySelectedForDeletion: ModelEntity? = nil {
+        
         willSet(newValue) {
             if entitySelectedForDeletion == nil, let newlySelectedModelEntity = newValue {
                 let component = ModelDebugOptionsComponent(visualizationMode: .lightingDiffuse)

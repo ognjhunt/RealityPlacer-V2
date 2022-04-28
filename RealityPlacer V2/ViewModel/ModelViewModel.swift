@@ -9,7 +9,9 @@ import Foundation
 import FirebaseFirestore
 
 class ModelViewModel: ObservableObject {
+    
     @Published var models: [Model] = []
+    
     private let db = Firestore.firestore()
     
     func fetchData() {

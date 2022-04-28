@@ -34,6 +34,7 @@ import SwiftUI
 //    }
 
 struct DeletionButton: View {
+    
     let iconName: String
     let action: () -> Void
     

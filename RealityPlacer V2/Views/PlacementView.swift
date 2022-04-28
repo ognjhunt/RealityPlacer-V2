@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 struct PlacementView: View {
+    
     @EnvironmentObject var placementSettings: PlacementSettings
+    
     var body: some View {
         HStack {
             PlacementButton(systemIcon: "xmark.circle") {
@@ -29,8 +31,10 @@ struct PlacementView: View {
 }
 
 struct PlacementButton: View {
+    
     let systemIcon: String
     let action: () -> Void
+    
     var body: some View {
         Button {
             action()

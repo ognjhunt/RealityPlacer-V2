@@ -37,9 +37,10 @@ class ScenePersistenceHelper {
                 }
                 return worldMap
             } catch {
-                fatalError("Persistence Error")
+                fatalError("Persistence Error: No ARWorldMap in Archive #2")
             }
         }()
+        
         let newConfig = arView.defaultConfig
         newConfig.initialWorldMap = worldMap
         arView.session.run(newConfig, options: [.resetTracking, .removeExistingAnchors])

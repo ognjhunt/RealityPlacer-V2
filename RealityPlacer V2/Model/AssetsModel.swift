@@ -45,13 +45,14 @@ enum AssetsModel: String, CaseIterable {
 }
 
 class Model: ObservableObject, Identifiable {
+    
+    @Published var thumbnail: UIImage
+    
     var name: String
     var id: String = UUID().uuidString
     var category: AssetsModel
-    @Published var thumbnail: UIImage
     var modelEntity: ModelEntity?
     var scaleCompensation: Float
-    
     var cancellable: AnyCancellable?
     
     init(name: String, category: AssetsModel, scaleCompensation: Float = 1.0) {

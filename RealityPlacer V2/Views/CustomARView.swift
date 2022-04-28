@@ -13,6 +13,7 @@ import ARKit
 import Combine
 
 class CustomARView: ARView {
+    
     var focusEntity: FocusEntity?
     var sessionSettings: SessionSettings
     var deletionManager: DeletionManager

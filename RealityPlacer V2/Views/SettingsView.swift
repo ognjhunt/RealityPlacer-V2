@@ -29,8 +29,11 @@ struct SettingsView: View {
 }
 
 struct settingsGrid: View {
+    
     @EnvironmentObject var sessionSettings: SessionSettings
+    
     private var gridItemLayout = [GridItem(.adaptive(minimum: 100, maximum: 100), spacing: 25)]
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 25) {
@@ -45,8 +48,11 @@ struct settingsGrid: View {
 }
 
 struct toggleButton: View {
+    
     let setting: Setting
+    
     @Binding var isOn: Bool
+    
     var body: some View {
         Button {
             isOn.toggle()

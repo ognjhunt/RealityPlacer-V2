@@ -44,7 +44,7 @@
 		6A5F0A3027F1C717003BB7C5 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		6A5F0A3227F1D060003BB7C5 /* AssetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsModel.swift; sourceTree = "<group>"; };
 		6A94D2362816CB13003BDA44 /* ScenePersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePersistenceHelper.swift; sourceTree = "<group>"; };
-		6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealityPlacer V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB9318F27F0F308003F5E40 /* RealityPlacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealityPlacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB9319227F0F308003F5E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB9319427F0F308003F5E40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6AB9319827F0F309003F5E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		6AB9319027F0F308003F5E40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */,
+				6AB9318F27F0F308003F5E40 /* RealityPlacer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AB9318E27F0F308003F5E40 /* RealityPlacer V2 */ = {
+		6AB9318E27F0F308003F5E40 /* RealityPlacer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AB9319F27F0F309003F5E40 /* Build configuration list for PBXNativeTarget "RealityPlacer V2" */;
+			buildConfigurationList = 6AB9319F27F0F309003F5E40 /* Build configuration list for PBXNativeTarget "RealityPlacer" */;
 			buildPhases = (
 				6AB9318B27F0F308003F5E40 /* Sources */,
 				6AB9318C27F0F308003F5E40 /* Frameworks */,
@@ -168,7 +168,7 @@
 			);
 			dependencies = (
 			);
-			name = "RealityPlacer V2";
+			name = RealityPlacer;
 			packageProductDependencies = (
 				6AACEA17280EA90600C69A59 /* FocusEntity */,
 				6A52538A2813F52D0036C61B /* FirebaseAuth */,
@@ -178,7 +178,7 @@
 				6A5253922813F52D0036C61B /* FirebaseStorageSwift-Beta */,
 			);
 			productName = "RealityPlacer V2";
-			productReference = 6AB9318F27F0F308003F5E40 /* RealityPlacer V2.app */;
+			productReference = 6AB9318F27F0F308003F5E40 /* RealityPlacer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AB9318E27F0F308003F5E40 /* RealityPlacer V2 */,
+				6AB9318E27F0F308003F5E40 /* RealityPlacer */,
 			);
 		};
 /* End PBXProject section */
@@ -449,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AB9319F27F0F309003F5E40 /* Build configuration list for PBXNativeTarget "RealityPlacer V2" */ = {
+		6AB9319F27F0F309003F5E40 /* Build configuration list for PBXNativeTarget "RealityPlacer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AB931A027F0F309003F5E40 /* Debug */,
