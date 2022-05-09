@@ -19,7 +19,6 @@ This app is currently in progress. Here's my progress;
 
 ### TODO:
 1. Make multi user work
-2. Make screenshot button work
 
 The project is built using [Swift](https://swift.org/documentation/#the-swift-programming-language) and uses Apple's latest swift APIs. 
 
