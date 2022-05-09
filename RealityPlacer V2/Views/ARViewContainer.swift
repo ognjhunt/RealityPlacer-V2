@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import RealityKit
 import ARKit
+import SceneKit
 
 private let anchorNamePrefix = "model-"
 
@@ -19,6 +20,7 @@ struct ARViewContainer: UIViewRepresentable {
     @EnvironmentObject var deletionManager: DeletionManager
     @EnvironmentObject var sceneManager: SceneManager
     @EnvironmentObject var viewModel: ModelViewModel
+    @EnvironmentObject var screenShotHelper: ScreenshotHelper
     
     func makeUIView(context: Context) -> CustomARView {
          
@@ -30,6 +32,7 @@ struct ARViewContainer: UIViewRepresentable {
             updateScene(for: arView)
             updatePersistanceAvailability(for: arView)
             handlePersistence(for: arView)
+            screenshotHelper(for: arView)
         })
         return arView
         
@@ -73,6 +76,13 @@ struct ARViewContainer: UIViewRepresentable {
             return nil
         }
         return raycastResult.worldTransform
+    }
+    
+    private func screenshotHelper(for view: CustomARView) {
+        if screenShotHelper.YesTakeAScreenshoot {
+            ScreenshotHelper.takeScreenshot(of: view)
+            screenShotHelper.YesTakeAScreenshoot = false
+        }
     }
 }
 

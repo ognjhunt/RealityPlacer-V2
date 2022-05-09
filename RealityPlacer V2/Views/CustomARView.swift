@@ -21,9 +21,6 @@ class CustomARView: ARView {
     var defaultConfig: ARWorldTrackingConfiguration {
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal, .vertical]
-        config.isAutoFocusEnabled = true
-        config.environmentTexturing = .automatic
-        config.wantsHDREnvironmentTextures = true
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             config.sceneReconstruction = .mesh
         }

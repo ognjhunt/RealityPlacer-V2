@@ -16,6 +16,7 @@ struct RealityPlacerV2: App {
     @StateObject var deletionManager = DeletionManager()
     @StateObject var sceneManager = SceneManager()
     @StateObject var modelViewModel = ModelViewModel()
+    @StateObject var screenshotManager = ScreenshotHelper()
     
     init() {
         FirebaseApp.configure()
@@ -39,6 +40,7 @@ struct RealityPlacerV2: App {
                 .environmentObject(deletionManager)
                 .environmentObject(sceneManager)
                 .environmentObject(modelViewModel)
+                .environmentObject(screenshotManager)
         }
     }
 }

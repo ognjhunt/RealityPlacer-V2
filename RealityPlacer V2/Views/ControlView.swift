@@ -79,6 +79,7 @@ struct ControlModePicker: View {
 struct HomeControlView: View {
     
     @EnvironmentObject var placementSettings: PlacementSettings
+    @EnvironmentObject var screenshotManager: ScreenshotHelper
     
     @Binding var isBrowserVisible: Bool
     @Binding var isSettingsVisible: Bool
@@ -105,6 +106,7 @@ struct HomeControlView: View {
             // Screenshot button
             Button {
                 print("DEBUG: Screenshot button pressed")
+                screenshotManager.YesTakeAScreenshoot = true
             } label: {
                 Image(systemName: "camera")
                     .font(.title)
